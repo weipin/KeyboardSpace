@@ -17,6 +17,9 @@
 		167A593C14FA1D6E00A16759 /* StandardBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A593B14FA1D6E00A16759 /* StandardBehaviorController.m */; };
 		167A593F14FA210200A16759 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167A593E14FA210200A16759 /* TextFieldCell.xib */; };
 		167A594214FA22CB00A16759 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A594114FA22CB00A16759 /* TextFieldCell.m */; };
+		167A594514FA25B400A16759 /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A594414FA25B400A16759 /* TextViewCell.m */; };
+		167A594714FA25C600A16759 /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167A594614FA25C600A16759 /* TextViewCell.xib */; };
+		167A594A14FA26F200A16759 /* StandardBehavior2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A594914FA26F200A16759 /* StandardBehavior2Controller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		167A593E14FA210200A16759 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextFieldCell.xib; path = Source/TextFieldCell.xib; sourceTree = "<group>"; };
 		167A594014FA22CB00A16759 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFieldCell.h; path = Source/TextFieldCell.h; sourceTree = "<group>"; };
 		167A594114FA22CB00A16759 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFieldCell.m; path = Source/TextFieldCell.m; sourceTree = "<group>"; };
+		167A594314FA25B400A16759 /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewCell.h; path = Source/TextViewCell.h; sourceTree = "<group>"; };
+		167A594414FA25B400A16759 /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextViewCell.m; path = Source/TextViewCell.m; sourceTree = "<group>"; };
+		167A594614FA25C600A16759 /* TextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextViewCell.xib; path = Source/TextViewCell.xib; sourceTree = "<group>"; };
+		167A594914FA26F200A16759 /* StandardBehavior2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StandardBehavior2Controller.m; path = Source/StandardBehavior2Controller.m; sourceTree = "<group>"; };
+		167A594B14FA283500A16759 /* StandardBehavior2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandardBehavior2Controller.h; path = Source/StandardBehavior2Controller.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,8 @@
 				167A593314FA1B5800A16759 /* SelectionTableViewController.m */,
 				167A593A14FA1D6E00A16759 /* StandardBehaviorController.h */,
 				167A593B14FA1D6E00A16759 /* StandardBehaviorController.m */,
+				167A594B14FA283500A16759 /* StandardBehavior2Controller.h */,
+				167A594914FA26F200A16759 /* StandardBehavior2Controller.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -120,6 +130,9 @@
 				167A594014FA22CB00A16759 /* TextFieldCell.h */,
 				167A594114FA22CB00A16759 /* TextFieldCell.m */,
 				167A593E14FA210200A16759 /* TextFieldCell.xib */,
+				167A594314FA25B400A16759 /* TextViewCell.h */,
+				167A594414FA25B400A16759 /* TextViewCell.m */,
+				167A594614FA25C600A16759 /* TextViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -176,6 +189,7 @@
 			files = (
 				167A592514FA1B1900A16759 /* InfoPlist.strings in Resources */,
 				167A593F14FA210200A16759 /* TextFieldCell.xib in Resources */,
+				167A594714FA25C600A16759 /* TextViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +205,8 @@
 				167A593414FA1B5800A16759 /* SelectionTableViewController.m in Sources */,
 				167A593C14FA1D6E00A16759 /* StandardBehaviorController.m in Sources */,
 				167A594214FA22CB00A16759 /* TextFieldCell.m in Sources */,
+				167A594514FA25B400A16759 /* TextViewCell.m in Sources */,
+				167A594A14FA26F200A16759 /* StandardBehavior2Controller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,6 +29,10 @@ NSString *const kDemoControllerDescriptionKey = @"Description";
                            @"Standard Behavor", kDemoControllerDescriptionKey,                           
                            nil],                           
                           
+                          [NSDictionary dictionaryWithObjectsAndKeys:
+                           @"StandardBehavior2Controller", kDemoControllerClassKey,
+                           @"Standard Behavor2", kDemoControllerDescriptionKey,                           
+                           nil],                           
                           nil];
 }
 
