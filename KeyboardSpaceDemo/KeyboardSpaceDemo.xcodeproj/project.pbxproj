@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		167A591B14FA1B1900A16759 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A591A14FA1B1900A16759 /* UIKit.framework */; };
+		167A591D14FA1B1900A16759 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A591C14FA1B1900A16759 /* Foundation.framework */; };
+		167A591F14FA1B1900A16759 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A591E14FA1B1900A16759 /* CoreGraphics.framework */; };
+		167A592514FA1B1900A16759 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 167A592314FA1B1900A16759 /* InfoPlist.strings */; };
+		167A592714FA1B1900A16759 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A592614FA1B1900A16759 /* main.m */; };
+		167A592B14FA1B1900A16759 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A592A14FA1B1900A16759 /* AppDelegate.m */; };
+		167A593414FA1B5800A16759 /* SelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A593314FA1B5800A16759 /* SelectionTableViewController.m */; };
+		167A593C14FA1D6E00A16759 /* StandardBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A593B14FA1D6E00A16759 /* StandardBehaviorController.m */; };
+		167A593F14FA210200A16759 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167A593E14FA210200A16759 /* TextFieldCell.xib */; };
+		167A594214FA22CB00A16759 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A594114FA22CB00A16759 /* TextFieldCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		167A591614FA1B1900A16759 /* KeyboardSpaceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardSpaceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		167A591A14FA1B1900A16759 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		167A591C14FA1B1900A16759 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		167A591E14FA1B1900A16759 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		167A592214FA1B1900A16759 /* KeyboardSpaceDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KeyboardSpaceDemo-Info.plist"; sourceTree = "<group>"; };
+		167A592414FA1B1900A16759 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		167A592614FA1B1900A16759 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		167A592814FA1B1900A16759 /* KeyboardSpaceDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KeyboardSpaceDemo-Prefix.pch"; sourceTree = "<group>"; };
+		167A592914FA1B1900A16759 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		167A592A14FA1B1900A16759 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		167A593214FA1B5800A16759 /* SelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectionTableViewController.h; path = Source/SelectionTableViewController.h; sourceTree = "<group>"; };
+		167A593314FA1B5800A16759 /* SelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectionTableViewController.m; path = Source/SelectionTableViewController.m; sourceTree = "<group>"; };
+		167A593A14FA1D6E00A16759 /* StandardBehaviorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandardBehaviorController.h; path = Source/StandardBehaviorController.h; sourceTree = "<group>"; };
+		167A593B14FA1D6E00A16759 /* StandardBehaviorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StandardBehaviorController.m; path = Source/StandardBehaviorController.m; sourceTree = "<group>"; };
+		167A593E14FA210200A16759 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextFieldCell.xib; path = Source/TextFieldCell.xib; sourceTree = "<group>"; };
+		167A594014FA22CB00A16759 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFieldCell.h; path = Source/TextFieldCell.h; sourceTree = "<group>"; };
+		167A594114FA22CB00A16759 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFieldCell.m; path = Source/TextFieldCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		167A591314FA1B1900A16759 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167A591B14FA1B1900A16759 /* UIKit.framework in Frameworks */,
+				167A591D14FA1B1900A16759 /* Foundation.framework in Frameworks */,
+				167A591F14FA1B1900A16759 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		167A590B14FA1B1900A16759 = {
+			isa = PBXGroup;
+			children = (
+				167A592014FA1B1900A16759 /* KeyboardSpaceDemo */,
+				167A591914FA1B1900A16759 /* Frameworks */,
+				167A591714FA1B1900A16759 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		167A591714FA1B1900A16759 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				167A591614FA1B1900A16759 /* KeyboardSpaceDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		167A591914FA1B1900A16759 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				167A591A14FA1B1900A16759 /* UIKit.framework */,
+				167A591C14FA1B1900A16759 /* Foundation.framework */,
+				167A591E14FA1B1900A16759 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		167A592014FA1B1900A16759 /* KeyboardSpaceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				167A592914FA1B1900A16759 /* AppDelegate.h */,
+				167A592A14FA1B1900A16759 /* AppDelegate.m */,
+				167A593D14FA20CC00A16759 /* Views */,
+				167A593114FA1B2800A16759 /* Controllers */,
+				167A592114FA1B1900A16759 /* Supporting Files */,
+			);
+			path = KeyboardSpaceDemo;
+			sourceTree = "<group>";
+		};
+		167A592114FA1B1900A16759 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				167A592214FA1B1900A16759 /* KeyboardSpaceDemo-Info.plist */,
+				167A592314FA1B1900A16759 /* InfoPlist.strings */,
+				167A592614FA1B1900A16759 /* main.m */,
+				167A592814FA1B1900A16759 /* KeyboardSpaceDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		167A593114FA1B2800A16759 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				167A593214FA1B5800A16759 /* SelectionTableViewController.h */,
+				167A593314FA1B5800A16759 /* SelectionTableViewController.m */,
+				167A593A14FA1D6E00A16759 /* StandardBehaviorController.h */,
+				167A593B14FA1D6E00A16759 /* StandardBehaviorController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		167A593D14FA20CC00A16759 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				167A594014FA22CB00A16759 /* TextFieldCell.h */,
+				167A594114FA22CB00A16759 /* TextFieldCell.m */,
+				167A593E14FA210200A16759 /* TextFieldCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		167A591514FA1B1900A16759 /* KeyboardSpaceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 167A592E14FA1B1900A16759 /* Build configuration list for PBXNativeTarget "KeyboardSpaceDemo" */;
+			buildPhases = (
+				167A591214FA1B1900A16759 /* Sources */,
+				167A591314FA1B1900A16759 /* Frameworks */,
+				167A591414FA1B1900A16759 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyboardSpaceDemo;
+			productName = KeyboardSpaceDemo;
+			productReference = 167A591614FA1B1900A16759 /* KeyboardSpaceDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		167A590D14FA1B1900A16759 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 167A591014FA1B1900A16759 /* Build configuration list for PBXProject "KeyboardSpaceDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 167A590B14FA1B1900A16759;
+			productRefGroup = 167A591714FA1B1900A16759 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				167A591514FA1B1900A16759 /* KeyboardSpaceDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		167A591414FA1B1900A16759 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167A592514FA1B1900A16759 /* InfoPlist.strings in Resources */,
+				167A593F14FA210200A16759 /* TextFieldCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		167A591214FA1B1900A16759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167A592714FA1B1900A16759 /* main.m in Sources */,
+				167A592B14FA1B1900A16759 /* AppDelegate.m in Sources */,
+				167A593414FA1B5800A16759 /* SelectionTableViewController.m in Sources */,
+				167A593C14FA1D6E00A16759 /* StandardBehaviorController.m in Sources */,
+				167A594214FA22CB00A16759 /* TextFieldCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		167A592314FA1B1900A16759 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				167A592414FA1B1900A16759 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		167A592C14FA1B1900A16759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		167A592D14FA1B1900A16759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		167A592F14FA1B1900A16759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KeyboardSpaceDemo/KeyboardSpaceDemo-Prefix.pch";
+				INFOPLIST_FILE = "KeyboardSpaceDemo/KeyboardSpaceDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		167A593014FA1B1900A16759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KeyboardSpaceDemo/KeyboardSpaceDemo-Prefix.pch";
+				INFOPLIST_FILE = "KeyboardSpaceDemo/KeyboardSpaceDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		167A591014FA1B1900A16759 /* Build configuration list for PBXProject "KeyboardSpaceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167A592C14FA1B1900A16759 /* Debug */,
+				167A592D14FA1B1900A16759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		167A592E14FA1B1900A16759 /* Build configuration list for PBXNativeTarget "KeyboardSpaceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167A592F14FA1B1900A16759 /* Debug */,
+				167A593014FA1B1900A16759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 167A590D14FA1B1900A16759 /* Project object */;
+}
