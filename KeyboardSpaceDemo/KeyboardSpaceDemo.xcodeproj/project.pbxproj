@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16263CCC1502636100CC65BE /* XWPKeyboardSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 16263CCB1502636100CC65BE /* XWPKeyboardSpace.m */; };
+		16263CD1150263A800CC65BE /* StandardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16263CCF150263A800CC65BE /* StandardViewController.m */; };
+		16263CD2150263A800CC65BE /* StandardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16263CD0150263A800CC65BE /* StandardViewController.xib */; };
+		16263CE115026FD000CC65BE /* XWPUIView+Accessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 16263CE015026FD000CC65BE /* XWPUIView+Accessing.m */; };
 		167A591B14FA1B1900A16759 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A591A14FA1B1900A16759 /* UIKit.framework */; };
 		167A591D14FA1B1900A16759 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A591C14FA1B1900A16759 /* Foundation.framework */; };
 		167A591F14FA1B1900A16759 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167A591E14FA1B1900A16759 /* CoreGraphics.framework */; };
@@ -23,6 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16263CCA1502636100CC65BE /* XWPKeyboardSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XWPKeyboardSpace.h; path = ../../XWPKeyboardSpace.h; sourceTree = "<group>"; };
+		16263CCB1502636100CC65BE /* XWPKeyboardSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XWPKeyboardSpace.m; path = ../../XWPKeyboardSpace.m; sourceTree = "<group>"; };
+		16263CCE150263A800CC65BE /* StandardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandardViewController.h; path = Source/StandardViewController.h; sourceTree = "<group>"; };
+		16263CCF150263A800CC65BE /* StandardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StandardViewController.m; path = Source/StandardViewController.m; sourceTree = "<group>"; };
+		16263CD0150263A800CC65BE /* StandardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StandardViewController.xib; path = Source/StandardViewController.xib; sourceTree = "<group>"; };
+		16263CDD15026D0300CC65BE /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = ../../GTMDefines.h; sourceTree = "<group>"; };
+		16263CDE15026D0300CC65BE /* GTMObjectSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMObjectSingleton.h; path = ../../GTMObjectSingleton.h; sourceTree = "<group>"; };
+		16263CDF15026FD000CC65BE /* XWPUIView+Accessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XWPUIView+Accessing.h"; path = "../../XWPUIView+Accessing.h"; sourceTree = "<group>"; };
+		16263CE015026FD000CC65BE /* XWPUIView+Accessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "XWPUIView+Accessing.m"; path = "../../XWPUIView+Accessing.m"; sourceTree = "<group>"; };
 		167A591614FA1B1900A16759 /* KeyboardSpaceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardSpaceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167A591A14FA1B1900A16759 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		167A591C14FA1B1900A16759 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +106,12 @@
 			children = (
 				167A592914FA1B1900A16759 /* AppDelegate.h */,
 				167A592A14FA1B1900A16759 /* AppDelegate.m */,
+				16263CDD15026D0300CC65BE /* GTMDefines.h */,
+				16263CDE15026D0300CC65BE /* GTMObjectSingleton.h */,
+				16263CCA1502636100CC65BE /* XWPKeyboardSpace.h */,
+				16263CCB1502636100CC65BE /* XWPKeyboardSpace.m */,
+				16263CDF15026FD000CC65BE /* XWPUIView+Accessing.h */,
+				16263CE015026FD000CC65BE /* XWPUIView+Accessing.m */,
 				167A593D14FA20CC00A16759 /* Views */,
 				167A593114FA1B2800A16759 /* Controllers */,
 				167A592114FA1B1900A16759 /* Supporting Files */,
@@ -120,6 +139,9 @@
 				167A593B14FA1D6E00A16759 /* StandardBehaviorController.m */,
 				167A594B14FA283500A16759 /* StandardBehavior2Controller.h */,
 				167A594914FA26F200A16759 /* StandardBehavior2Controller.m */,
+				16263CCE150263A800CC65BE /* StandardViewController.h */,
+				16263CCF150263A800CC65BE /* StandardViewController.m */,
+				16263CD0150263A800CC65BE /* StandardViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -190,6 +212,7 @@
 				167A592514FA1B1900A16759 /* InfoPlist.strings in Resources */,
 				167A593F14FA210200A16759 /* TextFieldCell.xib in Resources */,
 				167A594714FA25C600A16759 /* TextViewCell.xib in Resources */,
+				16263CD2150263A800CC65BE /* StandardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +230,9 @@
 				167A594214FA22CB00A16759 /* TextFieldCell.m in Sources */,
 				167A594514FA25B400A16759 /* TextViewCell.m in Sources */,
 				167A594A14FA26F200A16759 /* StandardBehavior2Controller.m in Sources */,
+				16263CCC1502636100CC65BE /* XWPKeyboardSpace.m in Sources */,
+				16263CD1150263A800CC65BE /* StandardViewController.m in Sources */,
+				16263CE115026FD000CC65BE /* XWPUIView+Accessing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +336,7 @@
 				167A593014FA1B1900A16759 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
