@@ -9,11 +9,8 @@
 @interface XWPKeyboardSpace : NSObject {
   UIView *view_;
   
-  // Frame of the keyboard in window's coordinate system.
-  CGRect keyboardFrame_;
   // Will be used to restore original offset, and y == -999 means we have never done such scroll yet.
-  CGPoint viewContentOffsetBeforeKeyboardIsShown_;
-  
+  CGPoint viewContentOffsetBeforeKeyboardIsShown_;  
 }
 
 + (id)sharedInstance;

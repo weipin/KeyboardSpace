@@ -15,7 +15,6 @@
 
 @property (readwrite, assign) UIView *view;
 
-@property (readwrite, assign) CGRect keyboardFrame;
 @property (readwrite, assign) CGPoint viewContentOffsetBeforeKeyboardIsShown;
 
 @end
@@ -25,7 +24,6 @@
 
 @dynamic view;
 
-@synthesize keyboardFrame = keyboardFrame_;
 @synthesize viewContentOffsetBeforeKeyboardIsShown = viewContentOffsetBeforeKeyboardIsShown_;
 
 GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
@@ -64,6 +62,10 @@ GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
                                            selector:@selector(keyboardWillHide:)
                                                name:UIKeyboardWillHideNotification
                                              object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self 
+                                           selector:@selector(keyboardWillChangeFrame:)
+                                               name:UIKeyboardWillChangeFrameNotification
+                                             object:nil];
 }
 
 - (void)attachToView:(UIView *)view {
@@ -87,7 +89,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
   // Get the frame of the keyboard in window's coordinate system.
   NSValue* value = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];  
   CGRect keyboardRect = [value CGRectValue];
-  self.keyboardFrame = [self.view convertRect:keyboardRect fromView:nil];
+  CGRect keyboardFrame = [self.view convertRect:keyboardRect fromView:nil];
   
   // Get the duration of the animation.
   NSValue *animationDurationValue = [userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey];
@@ -101,13 +103,13 @@ GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
   
   CGRect theViewFrame = theView.frame;
 //  theViewFrame = [self.view.window convertRect:theViewFrame fromView:self.view];
-  if (!CGRectIntersectsRect(self.keyboardFrame, theViewFrame)) {
+  if (!CGRectIntersectsRect(keyboardFrame, theViewFrame)) {
     return;
   }
   
   self.viewContentOffsetBeforeKeyboardIsShown = self.view.frame.origin;
   
-  CGFloat offset = CGRectGetMaxY(theViewFrame) - CGRectGetMinY(self.keyboardFrame);
+  CGFloat offset = CGRectGetMaxY(theViewFrame) - CGRectGetMinY(keyboardFrame);
   _GTMDevAssert(offset > 0, @"");
   
   CGPoint contentOffset = self.view.frame.origin;
@@ -151,5 +153,59 @@ GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
   self.viewContentOffsetBeforeKeyboardIsShown = CGPointMake(0, -999); 
 }
 
+- (void)keyboardWillChangeFrame:(NSNotification *)notification {
+  if (!self.view) {
+    return;
+  }
+  
+  if (!self.view.window) {
+    return;
+  }
+  
+  CGRect windowRect = self.view.window.frame;
+  CGRect windowFrame = [self.view convertRect:windowRect fromView:nil];
+  
+  NSDictionary *userInfo = [notification userInfo];
+  
+  NSValue* value = [userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey];  
+  CGRect beginKeyboardRect = [value CGRectValue];
+  CGRect beginKeyboardFrame = [self.view convertRect:beginKeyboardRect fromView:nil];
+  
+  value = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];  
+  CGRect endKeyboardRect = [value CGRectValue];
+  CGRect endKeyboardFrame = [self.view convertRect:endKeyboardRect fromView:nil];
+  
+  // ignore keyboard show/hide frame changes
+  if (!CGRectIntersectsRect(windowFrame, beginKeyboardFrame)
+      || !CGRectIntersectsRect(windowFrame, endKeyboardFrame)) {
+    return;
+  }
+  
+  // Get the duration of the animation.
+  NSValue *animationDurationValue = [userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+  NSTimeInterval animationDuration;
+  [animationDurationValue getValue:&animationDuration];
+  
+  UIView *theView = [self.view xwp_firstResponder];
+  if (!theView) {
+    return;
+  }
+  
+  CGRect theViewFrame = theView.frame;
+  CGFloat offset = CGRectGetMaxY(theViewFrame) - CGRectGetMinY(endKeyboardFrame);
+  
+  CGPoint contentOffset = self.view.frame.origin;
+  contentOffset.y -= offset;
+  
+  // Animate the scrolling of the table view in sync with the keyboard's appearance.
+  [UIView beginAnimations:nil context:NULL];
+  [UIView setAnimationDuration:animationDuration];
+  
+  CGRect frame = self.view.frame;
+  frame.origin = contentOffset;
+  self.view.frame = frame;
+  
+  [UIView commitAnimations];
+}
 
 @end
