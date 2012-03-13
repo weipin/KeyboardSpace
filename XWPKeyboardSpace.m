@@ -31,14 +31,13 @@ GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
 - (id)init {
   if (self = [super init]) {
     self.viewContentOffsetBeforeKeyboardIsShown = CGPointMake(0, -999);
+    
   }
   
   return self;
 }
 
 - (void)dealloc {
-  [[NSNotificationCenter defaultCenter] removeObserver:self];
-  
   [super dealloc];
 }
 
@@ -53,19 +52,28 @@ GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
   view_ = [view retain];
   
   self.viewContentOffsetBeforeKeyboardIsShown = CGPointMake(0, -999);
-
-  [[NSNotificationCenter defaultCenter] addObserver:self 
-                                           selector:@selector(keyboardWillShow:)
-                                               name:UIKeyboardWillShowNotification
-                                             object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self 
-                                           selector:@selector(keyboardWillHide:)
-                                               name:UIKeyboardWillHideNotification
-                                             object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self 
-                                           selector:@selector(keyboardWillChangeFrame:)
-                                               name:UIKeyboardWillChangeFrameNotification
-                                             object:nil];
+  
+  if (view) {
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    BOOL available = (&UIKeyboardWillChangeFrameNotification != NULL);
+    if (available) {
+      [[NSNotificationCenter defaultCenter] addObserver:self 
+                                               selector:@selector(keyboardWillChangeFrame:)
+                                                   name:UIKeyboardWillChangeFrameNotification
+                                                 object:nil];  
+    }  
+    
+  } else {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+        
+  }
 }
 
 - (void)attachToView:(UIView *)view {
@@ -74,7 +82,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
   self.view = view;
 }
 
-- (void)deattachFromView {
+- (void)detachFromView {
   self.view = nil;
 }
 

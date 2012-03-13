@@ -16,6 +16,6 @@
 + (id)sharedInstance;
 
 - (void)attachToView:(UIView *)view;
-- (void)deattachFromView;
+- (void)detachFromView;
 
 @end
