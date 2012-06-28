@@ -24,6 +24,8 @@
 		167A594514FA25B400A16759 /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A594414FA25B400A16759 /* TextViewCell.m */; };
 		167A594714FA25C600A16759 /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167A594614FA25C600A16759 /* TextViewCell.xib */; };
 		167A594A14FA26F200A16759 /* StandardBehavior2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 167A594914FA26F200A16759 /* StandardBehavior2Controller.m */; };
+		16DFCBDC159C4FE300CE59C4 /* ContainedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DFCBDA159C4FE300CE59C4 /* ContainedTableViewController.m */; };
+		16DFCBDD159C4FE300CE59C4 /* ContainedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16DFCBDB159C4FE300CE59C4 /* ContainedTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,9 @@
 		167A594614FA25C600A16759 /* TextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextViewCell.xib; path = Source/TextViewCell.xib; sourceTree = "<group>"; };
 		167A594914FA26F200A16759 /* StandardBehavior2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StandardBehavior2Controller.m; path = Source/StandardBehavior2Controller.m; sourceTree = "<group>"; };
 		167A594B14FA283500A16759 /* StandardBehavior2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandardBehavior2Controller.h; path = Source/StandardBehavior2Controller.h; sourceTree = "<group>"; };
+		16DFCBD9159C4FE300CE59C4 /* ContainedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ContainedTableViewController.h; path = Source/ContainedTableViewController.h; sourceTree = "<group>"; };
+		16DFCBDA159C4FE300CE59C4 /* ContainedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContainedTableViewController.m; path = Source/ContainedTableViewController.m; sourceTree = "<group>"; };
+		16DFCBDB159C4FE300CE59C4 /* ContainedTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContainedTableViewController.xib; path = Source/ContainedTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +147,9 @@
 				16263CCE150263A800CC65BE /* StandardViewController.h */,
 				16263CCF150263A800CC65BE /* StandardViewController.m */,
 				16263CD0150263A800CC65BE /* StandardViewController.xib */,
+				16DFCBD9159C4FE300CE59C4 /* ContainedTableViewController.h */,
+				16DFCBDA159C4FE300CE59C4 /* ContainedTableViewController.m */,
+				16DFCBDB159C4FE300CE59C4 /* ContainedTableViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -185,7 +193,7 @@
 		167A590D14FA1B1900A16759 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 167A591014FA1B1900A16759 /* Build configuration list for PBXProject "KeyboardSpaceDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -213,6 +221,7 @@
 				167A593F14FA210200A16759 /* TextFieldCell.xib in Resources */,
 				167A594714FA25C600A16759 /* TextViewCell.xib in Resources */,
 				16263CD2150263A800CC65BE /* StandardViewController.xib in Resources */,
+				16DFCBDD159C4FE300CE59C4 /* ContainedTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +242,7 @@
 				16263CCC1502636100CC65BE /* XWPKeyboardSpace.m in Sources */,
 				16263CD1150263A800CC65BE /* StandardViewController.m in Sources */,
 				16263CE115026FD000CC65BE /* XWPUIView+Accessing.m in Sources */,
+				16DFCBDC159C4FE300CE59C4 /* ContainedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

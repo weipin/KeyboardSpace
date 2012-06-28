@@ -1,25 +1,31 @@
 //
-//  StandardViewController.m
+//  ContainedTableViewController.m
 //  KeyboardSpaceDemo
 //
-//  Created by Weipin Xia on 3/3/12.
+//  Created by Weipin Xia on 6/28/12.
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "XWPKeyboardSpace.h"
 
-#import "StandardViewController.h"
+#import "StandardBehaviorController.h"
+
+#import "ContainedTableViewController.h"
 
 
-@implementation StandardViewController
+@implementation ContainedTableViewController
+
+@dynamic tableController;
 
 - (void)initReloadable {
+  [self.view addSubview:self.tableController.view];
+  self.tableController.view.frame = self.view.bounds;
+  
   [[XWPKeyboardSpace sharedInstance] attachToView:self.view];
 }
 
 - (void)deallocReloadable {
   [[XWPKeyboardSpace sharedInstance] detachFromView];
-  
 }
 
 - (void)dealloc {
@@ -42,13 +48,15 @@
   [self deallocReloadable];
 }
 
-#pragma mark - Text field delegate
+#pragma mark - Accessor 
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-  [self.view endEditing:YES];
+- (StandardBehaviorController *)tableController {
+  if (tableController_) {
+    return tableController_;
+  }
   
-  return YES;
+  tableController_ = [[StandardBehaviorController alloc] init];
+  return tableController_;
 }
-
 
 @end

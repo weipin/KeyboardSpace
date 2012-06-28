@@ -109,9 +109,8 @@ GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
     return;
   }
   
-  CGRect theViewFrame = theView.frame;
-//  theViewFrame = [self.view.window convertRect:theViewFrame fromView:self.view];
-  if (!CGRectIntersectsRect(keyboardFrame, theViewFrame)) {
+  CGRect theViewFrame = [self.view convertRect:theView.bounds fromView:theView];
+  if (CGRectGetMaxY(theViewFrame) < CGRectGetMinY(keyboardFrame)) {
     return;
   }
   

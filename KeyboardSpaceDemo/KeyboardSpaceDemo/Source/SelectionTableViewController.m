@@ -39,6 +39,10 @@ NSString *const kDemoControllerDescriptionKey = @"Description";
                            @"Standard View", kDemoControllerDescriptionKey,                           
                            nil],                           
                           
+                          [NSDictionary dictionaryWithObjectsAndKeys:
+                           @"ContainedTableViewController", kDemoControllerClassKey,
+                           @"Contained table view", kDemoControllerDescriptionKey,                           
+                           nil],                           
                           nil];
 }
 
