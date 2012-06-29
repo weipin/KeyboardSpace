@@ -22,6 +22,7 @@
 
 @implementation XWPKeyboardSpace
 
+@synthesize delegate = delegate_;
 @dynamic view;
 
 @synthesize viewContentOffsetBeforeKeyboardIsShown = viewContentOffsetBeforeKeyboardIsShown_;
@@ -76,10 +77,15 @@ GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
   }
 }
 
-- (void)attachToView:(UIView *)view {
+- (void)attachToView:(UIView *)view withDelegate:(id<XWPKeyboardSpaceDelegate>)delegate {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
-
+  
   self.view = view;
+  self.delegate = delegate;
+}
+
+- (void)attachToView:(UIView *)view {
+  [self attachToView:view withDelegate:nil];
 }
 
 - (void)detachFromView {
@@ -106,6 +112,10 @@ GTMOBJECT_SINGLETON_BOILERPLATE(XWPKeyboardSpace, sharedInstance)
 
   UIView *theView = [self.view xwp_firstResponder];
   if (!theView) {
+    return;
+  }
+  
+  if (self.delegate && ![self.delegate keyboardSpace:self shouldLayoutFirstResponder:theView]) {
     return;
   }
   
